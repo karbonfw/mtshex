@@ -7,6 +7,8 @@ import karbonfw.mtshex.domain.dishes.DishId;
 import karbonfw.mtshex.domain.dishes.DishRepository;
 import lombok.AllArgsConstructor;
 
+import java.util.Optional;
+
 @AllArgsConstructor
 public class DishFacade {
 
@@ -14,7 +16,7 @@ public class DishFacade {
     private final DishRepository dishRepository;
     private final DishQuery dishQuery;
 
-    public Dish findById(DishId id) {
+    public Optional<Dish> findById(DishId id) {
         return sec.requireRole(Roles.DISHES, () -> dishRepository.findById(id));
     }
 }
