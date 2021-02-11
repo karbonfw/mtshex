@@ -15,3 +15,7 @@ Run the web app located in `java/mtsj`. It will run H2 and bootstrap a database 
 Now run the web app located in this project (`mtshex`) located in `infra/web`.
 
 Access: `localhost:8082/dishmanagement/v1/dish/1`.
+
+# Spotless
+There is spotless configured for this project. The `gradlew build` will fail in case of any violations. 
+Run the `gradlew spotlessApply` to automatically fix these violations.
