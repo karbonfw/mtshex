@@ -1,6 +1,7 @@
 plugins {
     `java-library`
     id("io.freefair.lombok")
+    id("com.diffplug.spotless")
 }
 
 val persistenceApiVersion: String by project
