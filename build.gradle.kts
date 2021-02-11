@@ -9,14 +9,6 @@ java {
     targetCompatibility = JavaVersion.VERSION_14
 }
 
-spotless {
-    java {
-        googleJavaFormat("1.8").aosp()
-        removeUnusedImports()
-    }
-}
-
-
 allprojects {
     group = "karbonfw.mtshex"
     version = "1.0.0-SNAPSHOT"
@@ -27,5 +19,17 @@ allprojects {
     repositories {
         mavenCentral()
         jcenter()
+    }
+}
+
+subprojects {
+    plugins.withId("com.diffplug.spotless") {
+        spotless {
+            java {
+                googleJavaFormat("1.8")
+                removeUnusedImports()
+                importOrder("karbonfw", "java", "javax", "org", "com", "lombok")
+            }
+        }
     }
 }

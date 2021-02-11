@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = "karbonfw.mtshex.store")
 @EnableJpaRepositories(basePackages = "karbonfw.mtshex.store")
 public class MtsHexApplication {
-    public static void main(String[] args) {
-        SpringApplication.run(MtsHexApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(MtsHexApplication.class, args);
+  }
 }
